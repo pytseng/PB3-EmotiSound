@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The example shows how to create a Quiz, jQuery Survey Library Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+        <script src="sketch.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900|Open+Sans:400,300,600,700,800|Raleway:400,100,200,300,500,600,700,800,900">
+        <link rel="stylesheet" href="index.css">
+
+
+    </head>
+    <body>
+	<div class="container">
+		<div class="col-sm-12">
+			<div class="mm-survey">
+
+				<div class="mm-survey-progress">
+					<div class="mm-survey-progress-bar mm-progress"></div>
+				</div>
+
+				<div class="mm-survey-results">
+
+					<div class="mm-survey-results-container">
+						<div class="row">
+							<img src="img/frame1.jpg" alt="" class="">
+							<img src="img/frame2.jpg" alt="" class="">
+							<img src="img/frame3.jpg" alt="" class="">
+							<img src="img/frame4.jpg" alt="" class="">
+							<img src="img/frame5.jpg" alt="" class="">
+							<img src="img/frame6.jpg" alt="" class="">
+							<img src="img/frame7.jpg" alt="" class="">
+						</div>
+						<h2>Thanks!</h2>
+						<p><a href="https://cornell.qualtrics.com/jfe/form/SV_6eYeCC4uksWXmSh" target="_blank">Please give us some feedbacks</a></p>
+						<!-- <h3 class="mm-survey-results-score"></h3>
+						<ul class="mm-survey-results-list"></ul> -->
+					</div>
+					<div class="mm-survey-results-controller">
+						<div class="mm-back-btn">
+							<button>Back</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="mm-survey-bottom">
+					<div class="mm-survey-container">
+
+						<div class="mm-survey-page active" data-page="1">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame1.jpg" alt="" class="">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-wp-preserve="%3Cscript%20type%3D%22text%2Fjavascript%22%3E%5B%2Fcode%5D%3C%2Fpre%3E%0A%3Cp%3Eand%3C%2Fp%3E%0A%3Cpre%3E%5Bcode%20lang%3D%22html%22%20light%3D%22true%22%5D%3C%2Fscript%3E" data-mce-resize="false" data-mce-placeholder="1" class="mce-object" width="20" height="20" alt="&lt;script&gt;" title="&lt;script&gt;" />:
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radioa1" data-item="1" name="radio1" value="1" data-song="a1"/>
+									<label for="radioa1"><span></span><p>option a1</p></label>
+									<audio id="a1" controls="controls">
+									  <source src="audio/80 BPM Drums.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radioa2" data-item="1" name="radio1" value="2" data-song="a2"/>
+									<label for="radioa2"><span></span><p>option a2</p></label>
+									<audio id="a2" controls="controls">
+									  <source src="audio/120_1_Tempo_FastDrum.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="mm-survey-page" data-page="2">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<p>Which one of these car brands is made in Germany?</p>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radiob1" data-item="2" name="radio2" value="b1" data-song="b1" />
+									<label for="radiob1"><span></span><p>music 3</p></label>
+									<audio id="b1" controls="controls">
+									  <source src="audio/80 Major Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radiob2" data-item="2" name="radio2" value="b2" data-song="b2"/>
+									<label for="radiob2"><span></span><p>music 4</p></label>
+									<audio id="b2" controls="controls">
+									  <source src="audio/80 Minor Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+							</div>
+						</div> -->
+
+						<div class="mm-survey-page" data-page="2">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame2.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiob1" data-item="2" name="radio2" value="b1" data-song="b1"/>
+									<label for="radiob1"><span></span><p>option b1</p></label>
+									<audio id="b1" controls="controls">
+									  <source src="audio/80 Major Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiob2" data-item="2" name="radio2" value="b2" data-song="b2"/>
+									<label for="radiob2"><span></span><p>option b2</p></label>
+									<audio id="b2" controls="controls">
+									  <source src="audio/80 Minor Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>							
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiob3" data-item="2" name="radio2" value="b3" data-song="b3"/>
+									<label for="radiob3"><span></span><p>option b3</p></label>
+									<audio id="b3" controls="controls">
+									  <source src="audio/120_2_Mode_Major.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiob4" data-item="2" name="radio2" value="b2" data-song="b4"/>
+									<label for="radiob4"><span></span><p>option b4</p></label>
+									<audio id="b4" controls="controls">
+									  <source src="audio/120_2_Mode_Minor.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>							
+								</div>								
+							</div>
+						</div>	
+
+						<div class="mm-survey-page" data-page="3">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame3.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radioc1" data-item="3" name="radio3" value="c1" data-song="c1"/>
+									<label for="radioc1"><span></span><p>option c1</p></label>
+									<audio id="c1" controls="controls">
+									  <source src="audio/80 High Variability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radioc2" data-item="3" name="radio3" value="c2" data-song="c2"/>
+									<label for="radioc2"><span></span><p>option c2</p></label>
+									<audio id="c2" controls="controls">
+									  <source src="audio/80 Low Variability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radioc3" data-item="3" name="radio3" value="c1" data-song="c3"/>
+									<label for="radioc3"><span></span><p>option c3</p></label>
+									<audio id="c3" controls="controls">
+									  <source src="audio/120_3_Pitch_HighVariability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radioc4" data-item="3" name="radio3" value="c2" data-song="c4"/>
+									<label for="radioc4"><span></span><p>option c4</p></label>
+									<audio id="c4" controls="controls">
+									  <source src="audio/120_3_Pitch_LowVariability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>								
+							</div>
+						</div>
+
+						<div class="mm-survey-page" data-page="4">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame4.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiod1" data-item="4" name="radio4" value="d1" data-song="d1"/>
+									<label for="radiod1"><span></span><p>option d1</p></label>
+									<audio id="d1" controls="controls">
+									  <source src="audio/80 Interval 5th.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiod2" data-item="4" name="radio4" value="d2" data-song="d2"/>
+									<label for="radiod2"><span></span><p>option d2</p></label>
+									<audio id="d2" controls="controls">
+									  <source src="audio/80 Interval 7th.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiod3" data-item="4" name="radio4" value="d1" data-song="d3"/>
+									<label for="radiod3"><span></span><p>option d3</p></label>
+									<audio id="d3" controls="controls">
+									  <source src="audio/120_4_Interval_major3rds.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiod4" data-item="4" name="radio4" value="d2" data-song="d4"/>
+									<label for="radiod4"><span></span><p>option d4</p></label>
+									<audio id="d4" controls="controls">
+									  <source src="audio/120_4_Interval_minor3rds.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>								
+							</div>
+						</div>
+
+						<div class="mm-survey-page" data-page="5">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame5.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radioe1" data-item="5" name="radio5" value="e1" data-song="e1"/>
+									<label for="radioe1"><span></span><p>option e1</p></label>
+									<audio id="e1" controls="controls">
+									  <source src="audio/80 Fast Attack.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radioe2" data-item="5" name="radio5" value="e2" data-song="e2"/>
+									<label for="radioe2"><span></span><p>option e2</p></label>
+									<audio id="e2" controls="controls">
+									  <source src="audio/80 Slow Attack.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radioe3" data-item="5" name="radio5" value="e1" data-song="e3"/>
+									<label for="radioe3"><span></span><p>option e3</p></label>
+									<audio id="e3" controls="controls">
+									  <source src="audio/120_5_ToneAttacks_Fast.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radioe4" data-item="5" name="radio5" value="e2" data-song="e4"/>
+									<label for="radioe4"><span></span><p>option e4</p></label>
+									<audio id="e4" controls="controls">
+									  <source src="audio/120_5_ToneAttacks_Slow.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>								
+							</div>
+						</div>
+
+						<div class="mm-survey-page" data-page="6">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame6.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiof1" data-item="6" name="radio6" value="f1" data-song="f1"/>
+									<label for="radiof1"><span></span><p>option f1</p></label>
+									<audio id="f1" controls="controls">
+									  <source src="audio/80 Bright Tone.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiof2" data-item="6" name="radio6" value="f2" data-song="f2"/>
+									<label for="radiof2"><span></span><p>option f2</p></label>
+									<audio id="f2" controls="controls">
+									  <source src="audio/80 Dark Tone.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiof3" data-item="6" name="radio6" value="f1" data-song="f3"/>
+									<label for="radiof3"><span></span><p>option f3</p></label>
+									<audio id="f3" controls="controls">
+									  <source src="audio/120_6_Timbre_Bright.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiof4" data-item="6" name="radio6" value="f2" data-song="f4"/>
+									<label for="radiof4"><span></span><p>option f4</p></label>
+									<audio id="f4" controls="controls">
+									  <source src="audio/120_6_Timbre_Soft.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>								
+							</div>
+						</div>
+
+						<div class="mm-survey-page" data-page="7">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<img src="img/frame7.jpg" alt="" class="">
+									<p>Which music fragment fit this frame better?</p>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiog1" data-item="7" name="radio7" value="g1" data-song="g1"/>
+									<label for="radiog1"><span></span><p>option g1</p></label>
+									<audio id="g1" controls="controls">
+									  <source src="audio/80 Loud.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 80bpm">
+									<input type="radio" id="radiog2" data-item="7" name="radio7" value="g2" data-song="g2"/>
+									<label for="radiog2"><span></span><p>option g2</p></label>
+									<audio id="g2" controls="controls">
+									  <source src="audio/80 Soft.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiog3" data-item="7" name="radio7" value="g1" data-song="g3"/>
+									<label for="radiog3"><span></span><p>option g3</p></label>
+									<audio id="g3" controls="controls">
+									  <source src="audio/120_7_Loudness_HighVariability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item 120bpm">
+									<input type="radio" id="radiog4" data-item="7" name="radio7" value="g2" data-song="g4"/>
+									<label for="radiog4"><span></span><p>option g4</p></label>
+									<audio id="g4" controls="controls">
+									  <source src="audio/120_7_Loudness_LowVariability.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>									
+								</div>								
+							</div>
+						</div>																																
+
+<!-- 						<div class="mm-survey-page" data-page="2">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<p>Which one of these car brands is made in Germany?</p>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radiob1" data-item="2" name="radio2" value="b1" data-song="b1" />
+									<label for="radiob1"><span></span><p>music 3</p></label>
+									<audio id="b1" controls="controls">
+									  <source src="audio/80 Major Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radiob2" data-item="2" name="radio2" value="b2" data-song="b2"/>
+									<label for="radiob2"><span></span><p>music 4</p></label>
+									<audio id="b2" controls="controls">
+									  <source src="audio/80 Minor Piano.mp3" type="audio/mp3">
+									  Your browser does not support the <code>audio</code> element. 
+									</audio>
+								</div>
+							</div>
+						</div>
+						<div class="mm-survey-page" data-page="3">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<p>Which is the correct integer for Pi?</p>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio09" data-item="3" name="radio3" value="3" />
+									<label for="radio09"><span></span><p>3</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio10" data-item="3" name="radio3" value="4" />
+									<label for="radio10"><span></span><p>4</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio11" data-item="3" name="radio3" value="3.41" />
+									<label for="radio11"><span></span><p>3.41</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio12" data-item="3" name="radio3" value="3.14" />
+									<label for="radio12"><span></span><p>3.14</p></label>
+								</div>
+							</div>
+						</div>
+						<div class="mm-survey-page" data-page="4">
+							<div class="mm-survery-content">
+								<div class="mm-survey-question">
+									<p>The letter 'C' is the nth number in the alphabet, choose the correct number.</p>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio13" data-item="4" name="radio4" value="1" />
+									<label for="radio13"><span></span><p>1</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio14" data-item="4" name="radio4" value="2" />
+									<label for="radio14"><span></span><p>2</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio15" data-item="4" name="radio4" value="3" />
+									<label for="radio15"><span></span><p>3</p></label>
+								</div>
+								<div class="mm-survey-item">
+									<input type="radio" id="radio16" data-item="4" name="radio4" value="4" />
+									<label for="radio16"><span></span><p>4</p></label>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="mm-survey-page" data-page="5">
+							<div class="mm-survery-content">
+
+							</div>
+						</div>
+						<div class="mm-survey-page" data-page="6">
+							<div class="mm-survery-content">
+
+							</div>
+						</div>
+						<div class="mm-survey-page" data-page="7">
+							<div class="mm-survery-content">
+
+							</div>
+						</div> -->
+
+					</div>
+
+					<div class="mm-survey-controller">
+						<div class="mm-prev-btn">
+							<button>Prev</button>
+						</div>
+						<div class="mm-next-btn">
+							<button disabled="true">Next</button>
+						</div>
+						<div class="mm-finish-btn">
+							<button>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
+        <script src="index.js"></script>
+        <script src="serialport.js"></script>
+    </body>
+</html>
